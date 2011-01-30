@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{1AB84D29-BED8-4312-8481-57DB49966EF3}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Logging_XBox360</RootNamespace>
+    <AssemblyName>Common.Logging_XBox360</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>b7afbf72-e89c-4b50-89fa-07e7ef210c36</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyDoc.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CoverageExcludeAttribute.cs" />
+    <Compile Include="Logging\ConfigurationException.cs" />
+    <Compile Include="Logging\ConfigurationSectionHandler.cs" />
+    <Compile Include="Logging\Configuration\ArgUtils.cs" />
+    <Compile Include="Logging\Configuration\DefaultConfigurationReader.cs" />
+    <Compile Include="Logging\Configuration\LogSetting.cs" />
+    <Compile Include="Logging\Configuration\NamespaceDoc.cs" />
+    <Compile Include="Logging\Factory\AbstractCachingLoggerFactoryAdapter.cs" />
+    <Compile Include="Logging\Factory\AbstractLogger.cs" />
+    <Compile Include="Logging\Factory\NamespaceDoc.cs" />
+    <Compile Include="Logging\FormatMessageHandler.cs" />
+    <Compile Include="Logging\IConfigurationReader.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\ILoggerFactoryAdapter.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Logging\NamespaceDoc.cs" />
+    <Compile Include="Logging\Simple\AbstractSimpleLogger.cs" />
+    <Compile Include="Logging\Simple\AbstractSimpleLoggerFactoryAdapter.cs" />
+    <Compile Include="Logging\Simple\CapturingLogger.cs" />
+    <Compile Include="Logging\Simple\CapturingLoggerEvent.cs" />
+    <Compile Include="Logging\Simple\CapturingLoggerFactoryAdapter.cs" />
+    <Compile Include="Logging\Simple\CommonLoggingTraceListener.cs" />
+    <Compile Include="Logging\Simple\ConsoleOutLogger.cs" />
+    <Compile Include="Logging\Simple\ConsoleOutLoggerFactoryAdapter.cs" />
+    <Compile Include="Logging\Simple\NamespaceDoc.cs" />
+    <Compile Include="Logging\Simple\NoOpLogger.cs" />
+    <Compile Include="Logging\Simple\NoOpLoggerFactoryAdapter.cs" />
+    <Compile Include="Logging\Simple\TraceLogger.cs" />
+    <Compile Include="Logging\Simple\TraceLoggerFactoryAdapter.cs" />
+    <Compile Include="NamespaceDoc_Introduction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
