@@ -88,6 +88,7 @@
     <Compile Include="Logging\Simple\TraceLogger.cs" />
     <Compile Include="Logging\Simple\TraceLoggerFactoryAdapter.cs" />
     <Compile Include="NamespaceDoc_Introduction.cs" />
+    <Compile Include="PlatformHacks.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

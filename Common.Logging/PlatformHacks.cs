@@ -18,14 +18,15 @@
 
 #endregion
 
-using Common.Logging;
+using System;
 
-/// <summary>
-/// This assembly contains the core functionality of the Common.Logging framework.
-/// In particular, checkout <see cref="LogManager"/> and <see cref="ILog"/> for usage information.
-/// </summary>
-[CoverageExclude]
-internal static class AssemblyDoc
+#if SILVERLIGHT || XBOX360
+
+namespace System
 {
-    // serves as assembly summary for NDoc3 (http://ndoc3.sourceforge.net)
+    internal class SerializableAttribute : Attribute { }
+    internal class NonSerializedAttribute : Attribute { }
+    public class ApplicationException : Exception { }
 }
+
+#endif
